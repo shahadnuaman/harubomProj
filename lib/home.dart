@@ -22,7 +22,7 @@ class Home extends StatelessWidget {
         ///routes:
         routes: {
           // When navigating to the "/" route, build the FirstScreen widget.
-          '/details': (context) => DetailsScreen()
+          '/details': (context) => DetailsScreen(),
         },
         home: Scaffold(
           ///appBar: app(title: Text("title")),
