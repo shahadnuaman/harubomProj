@@ -211,8 +211,7 @@ class RegistrationScreen extends StatelessWidget {
                     shape: new RoundedRectangleBorder(
                         borderRadius: new BorderRadius.circular(10.0)),
                   ),
-                  onPressed: () =>
-                      {Navigator.pushNamed(context, LoginScreen.routeName)},
+                  onPressed: () => {Navigator.pushNamed(context, '/login')},
                   child: const Text(
                     'تسجيل ',
                     style: const TextStyle(
@@ -227,8 +226,7 @@ class RegistrationScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 InkWell(
-                  onTap: () =>
-                      {Navigator.pushNamed(context, LoginScreen.routeName)},
+                  onTap: () => {Navigator.pushNamed(context, '/login')},
                   child: const Text(
                     " سجل دخولك",
                     style: const TextStyle(

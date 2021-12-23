@@ -28,7 +28,7 @@ class ProductCard extends StatelessWidget {
           child: GestureDetector(
             onTap: () => Navigator.pushNamed(
               context,
-              DetailsScreen.routeName,
+              '/details',
               arguments: ProductDetailsArguments(product: product),
             ),
             child: Column(

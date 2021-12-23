@@ -17,37 +17,81 @@ class ProductDescription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          child: Text(
-            product.title,
-            textDirection: TextDirection.rtl,
-            style: Theme.of(context).textTheme.headline6,
-          ),
-        ),
-        Align(
-          alignment: Alignment.centerRight,
-          child: Container(
-            padding: EdgeInsets.all(15),
-            width: 64,
-            decoration: BoxDecoration(
-              color:
-                  product.isFavourite ? Color(0xFFFFE6E6) : Color(0xFFF5F6F9),
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(20),
-                bottomLeft: Radius.circular(20),
+          padding: EdgeInsets.symmetric(horizontal: 50),
+          child: Center(
+            child: Row(children: [
+              IconButton(
+                  onPressed: null,
+                  icon: Icon(
+                    Icons.add_circle_outline,
+                    size: 30,
+                    color: Color(0XFFA0054F),
+                  )),
+              SizedBox(
+                width: 30,
               ),
-            ),
-            child: SvgPicture.asset(
-              "assets/icons/Heart Icon_2.svg",
-              color:
-                  product.isFavourite ? Color(0xFFFF4848) : Color(0xFFDBDEE4),
-              height: 16,
-            ),
+              Text(
+                "1",
+                style: TextStyle(
+                    fontFamily: 'Cairo',
+                    fontSize: 35,
+                    color: Color(0XFFA0054F)),
+              ),
+              SizedBox(
+                width: 30,
+              ),
+              IconButton(
+                  onPressed: null,
+                  icon: Icon(
+                    Icons.remove_circle_outline,
+                    size: 32,
+                    color: Color(0XFFA0054F),
+                  ))
+            ], mainAxisAlignment: MainAxisAlignment.center),
           ),
         ),
+        // Container(
+        //   child: Row(
+        //     children: [Icon(Icons.access_alarm)],
+        //   ),
+        // ),
+
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 50),
+          // child: Center(
+          //   child: Text(
+          //     product.title,
+          //     style: TextStyle(fontSize: 16, fontFamily: 'Cairo'),
+          //     //Theme.of(context).textTheme.headline6,
+          //     textDirection: TextDirection.rtl,
+          //   ),
+          // ),
+        ),
+        SizedBox(height: 20),
+        // Align(
+        //   alignment: Alignment.centerLeft,
+        //   child: Container(
+        //     padding: EdgeInsets.all(15),
+        //     width: 64,
+        //     decoration: BoxDecoration(
+        //       color:
+        //           product.isFavourite ? Color(0xFFFFE6E6) : Color(0xFFF5F6F9),
+        //       borderRadius: BorderRadius.only(
+        //         topRight: Radius.circular(20),
+        //         bottomRight: Radius.circular(20),
+        //       ),
+        //     ),
+        //     child: SvgPicture.asset(
+        //       "assets/icons/Heart Icon_2.svg",
+        //       color:
+        //           product.isFavourite ? Color(0xFFA0054F) : Color(0xFFDBDEE4),
+        //       height: 16,
+        //     ),
+        //   ),
+        // ),
         Padding(
           padding: EdgeInsets.only(
             left: 20,
@@ -55,6 +99,8 @@ class ProductDescription extends StatelessWidget {
           ),
           child: Text(
             product.description,
+            textAlign: TextAlign.right,
+            style: TextStyle(fontSize: 16, fontFamily: 'Cairo'),
             maxLines: 3,
           ),
         ),
@@ -67,18 +113,18 @@ class ProductDescription extends StatelessWidget {
             onTap: () {},
             child: Row(
               children: [
-                Text(
-                  "المزيد...",
-                  textDirection: TextDirection.rtl,
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600, color: kPrimaryColor),
-                ),
-                SizedBox(width: 5),
-                Icon(
-                  Icons.arrow_forward_ios,
-                  size: 12,
-                  color: kPrimaryColor,
-                ),
+                // Text(
+                //   "المزيد...",
+                //   textDirection: TextDirection.rtl,
+                //   style: TextStyle(
+                //       fontWeight: FontWeight.w600, color: kPrimaryColor),
+                // ),
+                // SizedBox(width: 5),
+                // Icon(
+                //   Icons.arrow_forward_ios,
+                //   size: 12,
+                //   color: kPrimaryColor,
+                // ),
               ],
             ),
           ),

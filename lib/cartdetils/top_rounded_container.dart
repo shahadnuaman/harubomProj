@@ -13,14 +13,15 @@ class TopRoundedContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 320,
       margin: EdgeInsets.only(top: 20),
-      padding: EdgeInsets.only(top: 20),
+      padding: EdgeInsets.only(top: 25),
       width: double.infinity,
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(40),
-          topRight: Radius.circular(40),
+          topLeft: Radius.circular(70),
+          topRight: Radius.circular(70),
         ),
       ),
       child: child,

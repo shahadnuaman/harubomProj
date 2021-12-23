@@ -109,11 +109,11 @@ class LoginScreen extends StatelessWidget {
                     borderRadius: new BorderRadius.circular(10.0)),
               ),
               //! TODO NEED TO FIX THIS LATTER
-              // onPressed: () => hpush(context, Home()),
+              onPressed: () => hpush(context, Home()),
 
-              onPressed: () {
-                Navigator.of(context).pushNamed(Home.routeName);
-              },
+              // onPressed: () {
+              //   Navigator.pushNamed(context, '/home');
+              // },
               child: const Text(
                 'تسجيل دخول',
                 style: TextStyle(
@@ -128,8 +128,7 @@ class LoginScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             InkWell(
-              onTap: () =>
-                  {Navigator.pushNamed(context, RegistrationScreen.routeName)},
+              onTap: () => {Navigator.pushNamed(context, '/Registration')},
               child: const Text(
                 " سجل الان",
                 style: TextStyle(

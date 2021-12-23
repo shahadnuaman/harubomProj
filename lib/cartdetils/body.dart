@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:harubom/components/default_button.dart';
 import 'package:harubom/loginscreen.dart';
 import 'package:harubom/models/Product.dart';
+import 'package:harubom/screens/cart_screen.dart';
 
 import '../size_config.dart';
 import 'color_dots.dart';
@@ -19,66 +20,54 @@ class Body extends StatelessWidget {
     return ListView(
       children: [
         ProductImages(product: product),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "\$${product.price}",
+              style: TextStyle(
+                  color: Color(0xffA0054F), fontFamily: 'Cairo', fontSize: 20),
+            ),
+            Text(
+              product.title,
+              style: TextStyle(
+                  color: Color(0xffA0054F), fontFamily: 'Cairo', fontSize: 20),
+            ),
+          ],
+        ),
         TopRoundedContainer(
-          color: Colors.white,
+          color: Color(0xffDFEEF4),
           child: Column(
             children: [
               ProductDescription(
                 product: product,
                 pressOnSeeMore: () {},
               ),
+              SizedBox(height: 0),
               SizedBox(
-                height: 90,
-                width: 330,
-                child: TopRoundedContainer(
-                    color: Color(0xFFF6F7F9),
-                    child: SizedBox(
-                      child: TextButton(
-                          style: TextButton.styleFrom(
-                            backgroundColor: const Color(0xFF458CAA),
-                            primary: Colors.blue,
-                            onSurface: Color(0xffA0054F),
-                            shape: new RoundedRectangleBorder(
-                                borderRadius: new BorderRadius.circular(10.0)),
-                          ),
-                          onPressed: () => {
-                                Navigator.pushNamed(
-                                    context, LoginScreen.routeName)
-                              },
-                          child: const Text(
-                            'حجز ',
-                            textDirection: TextDirection.rtl,
-                            style: const TextStyle(
-                                color: Color(0xFFFFFFFF),
-                                fontFamily: 'Cairo',
-                                fontSize: 20),
-                          )),
+                height: 48,
+                width: 349,
+                child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: const Color(0xFF458CAA),
+                      ////    primary: Color(0xffA0054F),
+                      ///  onSurface: Color(0xffA0054F),
+                      shape: new RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(10.0)),
+                    ),
+                    onPressed: () => {Navigator.pushNamed(context, '/cart')},
+                    child: const Text(
+                      'اضافة للسلة ',
+                      textDirection: TextDirection.rtl,
+                      style: const TextStyle(
+                          color: Color(0xffFFFFFF),
+                          fontFamily: 'Cairo',
+                          fontSize: 20),
                     )),
-              )
-              // // TopRoundedContainer(
-              /// //   color: Color(0xFFF6F7F9),
-              //   // child: Column(
-              //   //   children: [
-              //   //     ColorDots(product: product),
-              //   //     // TopRoundedContainer(
-              //   //     //   color: Colors.white,
-              //   //     //   child: Padding(
-              //   //     //     // ignore: prefer_const_constructors
-              //   //     //     padding: EdgeInsets.only(
-              //   //     //       left: 10,
-              //   //     //       right: 10,
-              //   //     //       bottom: 40,
-              //   //     //       top: 15,
-              //   //     //     ),
-              //   //     //     child: DefaultButton(
-              //   //     //       text: "Add To Cart",
-              //   //     //       press: () {},
-              //   //     //     ),
-              //   //     //   ),
-              //   //     // ),
-              //   //   ],
-              //   // ),
-              // ),
+              ),
+
+              ///  TopRoundedContainer(color: Color(0xFFA0054F), child: Column())
             ],
           ),
         ),

@@ -81,6 +81,8 @@ flutter:
       fonts:
         - asset: fonts/Cairo-SemiBold.ttf
           weight: 700
+        - asset: fonts/Cairo-Regular.ttf
+
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

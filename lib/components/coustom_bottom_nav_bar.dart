@@ -62,7 +62,7 @@ class CustomBottomNavBar extends StatelessWidget {
                       ? kPrimaryColor
                       : inActiveIconColor,
                 ),
-                onPressed: () => hpush(context, Home()),
+                onPressed: () => hpush('context', Home()),
               ),
             ],
           )),
